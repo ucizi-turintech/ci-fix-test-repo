@@ -1,0 +1,28 @@
+[project]
+name = "ci-fix-test-repo"
+version = "0.1.0"
+description = "A simple Python project with unit tests and CI"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+
+[ tool.uv ]
+dev-dependencies = [
+    "pytest>=8.0.0",
+]
+
