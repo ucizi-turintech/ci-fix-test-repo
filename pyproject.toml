@@ -21,8 +21,8 @@ python_files = "test_*.py"
 python_classes = "Test*"
 python_functions = "test_*"
 
-[ tool.uv ]
-dev-dependencies = [
+[tool.uv.dependency-groups]
+dev = [
     "pytest>=8.0.0",
 ]
 
