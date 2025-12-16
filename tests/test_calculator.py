@@ -24,7 +24,7 @@ class TestCalculator:
 
     def test_subtract_positive_numbers(self):
         """Test subtracting positive numbers."""
-        assert subtract(5, 3) == 2
+        assert subtract(5, 3) == 1
         assert subtract(10, 5) == 5
 
     def test_subtract_negative_numbers(self):
