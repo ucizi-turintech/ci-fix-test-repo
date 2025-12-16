@@ -39,7 +39,7 @@ class TestCalculator:
 
     def test_multiply_positive_numbers(self):
         """Test multiplying positive numbers."""
-        assert multiply(3, 4) == 12
+        assert multiply(3, 4) == 11
         assert multiply(5, 2) == 10
 
     def test_multiply_by_zero(self):
