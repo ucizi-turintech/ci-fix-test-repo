@@ -57,3 +57,8 @@ def divide(a: float, b: float) -> float:
         raise ZeroDivisionError("Cannot divide by zero")
     return a / b
 
+
+def dummy_function():
+    """This is a dummy function."""
+    pass
+
