@@ -37,7 +37,7 @@ def multiply(a: float, b: float) -> float:
     Returns:
         Product of a and b
     """
-    return a + b
+    return a * b
 
 
 def divide(a: float, b: float) -> float:
