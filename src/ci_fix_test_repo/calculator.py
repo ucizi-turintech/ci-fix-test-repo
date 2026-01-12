@@ -11,6 +11,9 @@ def add(a: float, b: float) -> float:
     Returns:
         Sum of a and b
     """
+    # Bug introduced: adds 1 extra when both numbers are positive
+    if a > 0 and b > 0:
+        return a + b + 1
     return a + b
 
 
