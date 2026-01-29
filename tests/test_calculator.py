@@ -1,7 +1,7 @@
 """Unit tests for calculator module."""
 
 import pytest
-from ci_fix_test_repo.calculator import add, subtract, multiply, divide
+from ci_fix_test_repo.calculator import add, subtract, multiply, divide, power
 
 
 class TestCalculator:
@@ -73,4 +73,33 @@ class TestCalculator:
         """Test division resulting in float."""
         assert divide(7, 2) == 3.5
         assert divide(1, 3) == pytest.approx(0.3333333, rel=1e-6)
+
+    def test_power_positive_numbers(self):
+        """Test raising positive numbers to positive powers."""
+        assert power(2, 3) == 8
+        assert power(3, 2) == 9
+        assert power(5, 4) == 625
+
+    def test_power_zero_exponent(self):
+        """Test raising any number to the power of zero."""
+        assert power(5, 0) == 1
+        assert power(-3, 0) == 1
+        assert power(0, 0) == 1
+
+    def test_power_zero_base(self):
+        """Test raising zero to various powers."""
+        assert power(0, 2) == 0
+        assert power(0, 5) == 0
+
+    def test_power_negative_exponent(self):
+        """Test raising numbers to negative powers."""
+        assert power(2, -1) == 0.5
+        assert power(4, -2) == 0.0625
+        assert power(10, -3) == 0.001
+
+    def test_power_fractional_exponent(self):
+        """Test raising numbers to fractional powers."""
+        assert power(4, 0.5) == 2
+        assert power(9, 0.5) == 3
+        assert power(8, 1/3) == pytest.approx(2, rel=1e-6)
 

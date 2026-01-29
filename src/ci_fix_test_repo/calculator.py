@@ -57,3 +57,16 @@ def divide(a: float, b: float) -> float:
         raise ZeroDivisionError("Cannot divide by zero")
     return a / b
 
+
+def power(a: float, b: float) -> float:
+    """Raise first number to the power of second.
+
+    Args:
+        a: Base number
+        b: Exponent
+
+    Returns:
+        Result of a raised to the power of b
+    """
+    return a ** b
+
